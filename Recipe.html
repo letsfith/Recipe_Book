@@ -1,0 +1,2712 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<link rel="icon" href="https://icon-icons.com/icons2/390/PNG/512/knife-fork_39057.png">
+		
+        <style type="text/css">
+            .knitr .inline {
+                background-color: #f7f7f7;
+                border:solid 1px #B0B0B0;
+            }
+            .error {
+                font-weight: bold;
+                color: #FF0000;
+            }
+            .warning {
+                font-weight: bold;
+            }
+            .message {
+                font-style: italic;
+            }
+            .source, .output, .warning, .error, .message {
+                padding: 0 1em;
+                border:solid 1px #F7F7F7;
+            }
+            .source {
+                background-color: #f5f5f5;
+            }
+            .rimage .left {
+                text-align: left;
+            }
+            .rimage .right {
+                text-align: right;
+            }
+            .rimage .center {
+                text-align: center;
+            }
+            .hl.num {
+                color: #AF0F91;
+            }
+            .hl.str {
+                color: #317ECC;
+            }
+            .hl.com {
+                color: #AD95AF;
+                font-style: italic;
+            }
+                color: #000000;
+            }
+            .hl.std {
+                color: #585858;
+            }
+            .hl.kwa {
+                color: #295F94;
+                font-weight: bold;
+            }
+            .hl.kwb {
+                color: #B05A65;
+            }
+            .hl.kwc {
+                color: #55aa55;
+            }
+            .hl.kwd {
+                color: #BC5A65;
+                font-weight: bold;
+            }
+			
+			
+            #icon {
+                height: 20%;
+            }
+            html {
+                width:100%;
+                height:100%;
+            }
+            body {
+                background-color:#6b727c;
+                color:white;
+				padding-top: 70px;
+            }
+            #title {
+                text-align: center;
+            }
+            
+            #tableContent {
+                padding: 20px;
+                
+            }
+            #Preperations {
+                width: 100%;
+            }
+            #Preperations td:nth-child(1) {
+                width: 35%;
+                padding: 5px;
+            }
+            #Preperations td:nth-child(2) {
+                width: 50%;
+                vertical-align: top;
+                padding: 5px;
+            }
+			#Preperations  {
+                border: 1px solid white;
+            }
+            #Preperations td, #Preperations th, #Preperations tr {
+                border: 1px solid white;
+            }
+            
+            a:hover {
+                color: #1f4075;
+            }
+            a {
+                color: white;
+				font-weight: bold;
+                text-decoration:none;
+            }
+            #tag {
+                width: 13px;
+                height: 13px;
+            }
+			.myclass {
+				width: 20%;
+				height: auto;
+			}
+			.card{
+			background-color:#6b727c;
+			}
+			.mybutton:hover {
+                color: #1f4075;
+            }
+            .mybutton {
+                color: white;
+				font-weight: bold;
+                text-decoration:none;
+            }
+			#linkto {
+				text-align: center;
+			}
+			nav {
+				border-bottom: 1px #646970 solid;
+				box-shadow: 0 0 30px #292a2b;
+			}
+			#logo {
+                width: 40px;
+                height: 40px;
+				float: left;
+            }
+			#logoname {
+			  position: relative;
+			}
+        </style>
+        <title>Recipe book</title>
+		<div id="title">
+			<nav class="navbar fixed-top navbar-dark justify-content-between" style="background-color: #646a72;">
+				<a class="navbar-brand">
+					<img id="logo" src="https://icon-icons.com/icons2/390/PNG/512/knife-fork_39057.png" class="d-inline-block align-center" alt="">
+					<h1 id="logoname" class="d-none d-md-block">Delicious Recipes</h1>
+				</a>
+				<form class="form-inline">
+					<input id="accordion_search_bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<i class="glyphicon glyphicon-search"></i>
+				</form>
+			</nav>
+        </div>
+    </head>
+
+    <body>
+
+        
+
+        <!-- Table of Content for the recipes -->
+
+        <div id="tableContent">
+		
+			<div id="accordion">
+				<!-- Baked Bean Taquitos -->
+				<div class="card" id="BakedBeanTaquitosContainer">
+					<div class="card-header" id="BakedBeanTaquitos">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseBakedBeanTaquitos" aria-expanded="true" aria-controls="collapseBakedBeanTaquitos">
+								<img src="https://i.imgur.com/PtiYCCo.jpg" alt="Baked Bean" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Baked Bean Taquitos
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseBakedBeanTaquitos" class="collapse" aria-labelledby="BakedBeanTaquitos" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.reddit.com/r/GifRecipes/comments/63pox6/baked_bean_taquitos/">Baked Bean Taquitos</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.reddit.com/r/GifRecipes/comments/63pox6/baked_bean_taquitos/">Baked Bean Taquitos</a>
+										<ul>
+											<li>1 can pinto beans</li>
+											<li>1 tbs lime juice (or 1 lime)</li>
+											<li>1 tsp garlic powder</li>
+											<li>1 tsp ground cumin</li>
+											<li>1 tsp ground paprika</li>
+											<li>236 ml (1 can) black beans, drained and rinsed</li>
+											<li>177 ml cup (1 can) corn, drained and rinsed</li>
+											<li>130 g red pepper, finely chopped</li>
+											<li>113 g onion, finely chopped</li>
+											<li>1 jalapeno pepper, deseeded and minced</li>
+											<li>4 tbs fresh cilantro, finely chopped</li>
+											<li>24 6-inch corn tortillas</li>
+											<li>oil for brushing</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min</p>
+										<ol>
+											<li>Preheat the oven to 204 degrees celsius, and line a baking pad with aluminum foil</li>
+
+											<li>To a bowl, add pinto beans, lime juice, garlic powder, ground cumin, and ground paprika. Use a pastry cutter or a fork to mash together until smooth.</li>
+											<li>Add black beans, corn, red pepper, onion, jalapeño pepper, and cilantro. Stir until well combined.</li>
+											<li>Put corn tortillas on a plate, cover with a towel, and warm in the microwave for a minute to soften them. Keep them covered as you fill the tortillas. Use about a spoonful of filling for each tortilla.</li>
+											<li>Roll them tightly, and set them on the prepared baking pan (be sure to set them with the rolled edge down-so they don’t unroll). Brush the tops of the taquitos lightly with oil.</li>
+											<li>Bake about 25 minutes, or until the taquitos become crisp.</li>
+										</ol>
+									</td>
+								</tr>
+						</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Banana Bread -->
+				<div class="card" id="BananaBreadContainer">
+					<div class="card-header" id="BananaBread">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseBananaBread" aria-expanded="true" aria-controls="collapseBananaBread">
+								<img src="https://i.imgur.com/4s10hqe.jpg" alt="Banana Bread" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Banana Bread
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseBananaBread" class="collapse" aria-labelledby="BananaBread" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>250 g flour</li>
+											<li>1 tsp baking</li>
+											<li>2 tbs vanilla powder</li>
+											<li>1 pinch of salt</li>
+											<li>3 big bananas</li>
+											<li>3 eggs</li>
+											<li>100 g dates with no pits </li>
+										</ul>
+										<p>Optional ingredients</p>
+										<ul>
+											<li>Shredded coconut</li>
+											<li> Nutella</li>
+											<li> Vanilla</li>   
+											<li> Dried fruit</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 90 min</p>
+										<ol>
+											<li>Mix the banana's, eggs and dates in a bowl into a smooth mass</li>
+											<li>Add the flour, baking, vanilla powder and salt to the rest</li>
+											<li>Mix untill it forms a smooth dough</li>
+											<li>Add the optional ingredients</li>
+											<li>Bake in a pre heated over for 60 mins at 180°C</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Banana Pancake -->
+				<div class="card" id="BananaPancakeContainer">
+					<div class="card-header" id="BananaPancake">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseBananaPancake" aria-expanded="true" aria-controls="collapseBananaPancake">
+								<img src="https://i.imgur.com/pOuBRag.jpg" alt="Banana Pancake" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Banana Pancake
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseBananaPancake" class="collapse" aria-labelledby="BananaPancake" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>100 g flour</li>
+											<li>1 banana</li>
+											<li>150 ml milk</li>
+											<li>1 tsp baking </li>
+											<li>Pinch of salt</li>
+											<li>Oil</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time:  30 min</p>
+										<ol>
+											<li> Mix the flour, banana, milk, baking and salt into a smooth dough</li>
+											<li> Cook on low heat until both sides are brown</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- BeefInOysterSauce -->
+				<div class="card" id="BeefInOysterSauceContainer">
+					<div class="card-header" id="BeefInOysterSauce">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseBeefInOysterSauce" aria-expanded="true" aria-controls="collapseBeefInOysterSauce">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Beef In Oyster Sauce" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								Beef In Oyster Sauce
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseBeefInOysterSauce" class="collapse" aria-labelledby="BeefInOysterSauce" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>Beef</li>
+											<li>Spinach</li>
+											<li>Soy sauce</li>
+											<li>Oyster sauce</li>
+											<li>Ginger</li>
+											<li>Garlic</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+											<li>Chili</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 25 min</p>
+										<ol>
+											<li>Add the beef, soy sauce, salt, pepper and oyster sauce together.</li>
+											<li>Fry the garlic, ginger, chilli and spinach and set aside on plate.</li>
+											<li>Fry the beef apart.</li>
+											<li>Add beef on top of the spinach.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Beijin Beef Panda Express -->
+				<div class="card" id="BeijinBeefPandaExpressContainer">
+					<div class="card-header" id="BeijinBeefPandaExpress">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseBeijinBeefPandaExpress" aria-expanded="true" aria-controls="collapseBeijinBeefPandaExpress">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Beijin Beef Panda Express" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								Beijin Beef Panda Express
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseBeijinBeefPandaExpress" class="collapse" aria-labelledby="BeijinBeefPandaExpress" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://rasamalaysia.com/beijing-beef-recipe/">Beijin Beef Panda Express</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<p>Meat</p>
+										<ul>
+											<li>227 g flank steak, sirloin or beef flap, cut into 0,6cm slices</li>
+											<li>2 tbs oil</li>
+											<li>2 garlic cloves, minced</li>
+											<li>½ onion, sliced</li>
+											<li>½ red bell pepper, cut into pieces</li>
+											<li>Cornstarch</li>
+											<li>Salt</li>
+											<li>Sugar</li>
+										</ul>
+										<p>Marinade</p>
+										<ul>
+											<li>1 egg</li>
+											<li>½ tsp cornstarch</li>
+											<li>White pepper</li>
+											<li>½ tsp salt</li>
+										</ul>
+										<p>Beijing Sauce</p>
+										<ul>
+											<li>4 tbs water</li>
+											<li>2 tbs sugar</li>
+											<li>1 ½ tbs ketchup</li>
+											<li>3 tbs hoisin sauce</li>
+											<li>2 tsp soy sauce</li>
+											<li>1 tsp oyster sauce</li>
+											<li>2 tsp sweet chili sauce</li>
+											<li>1-2 tsp crushed chili peppers</li>
+											<li>1 tbs apple cider vinegar</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min</p>
+										<ol>
+											<li>Add the marinade in a bowl and add steak to it. Marinade for 15 min.</li>
+											<li>Mix all beijing sauce together in a bowl.</li>
+											<li>Coat beef in cornstarch and deep fry.</li>
+											<li>Heat up oil in wok. Stir fry onion and bell pepper until onion gets colour. Add garlic and stir for 10 sec. Remove from wok.</li>
+											<li>Add Beijing sauce to wok. Cook till thick. Add beef, onion and red pepper stir fry to the sauce. Stir for 1 min and serve.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Cajun Chicken Ragu -->
+				<div class="card" id="CajunChickenRaguContainer">
+					<div class="card-header" id="CajunChickenRagu">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCajunChickenRagu" aria-expanded="true" aria-controls="collapseCajunChickenRagu">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Cajun Chicken Ragu" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Cajun Chicken Ragu
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCajunChickenRagu" class="collapse" aria-labelledby="CajunChickenRagu" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://foodwishes.blogspot.nl/2013/02/cajun-chicken-ragu-old-and-misspelled.html"> Cajun Chicken Ragu </a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>6 slices of bacon, cut into small pieces</li>
+											<li>1 large onion, diced</li>
+											<li>2 ribs celery, diced</li>
+											<li>large pinch of salt</li>
+											<li>1 green bell pepper, diced</li>
+											<li>1 red bell pepper, diced</li>
+											<li>3 cloves garlic, minced</li>
+											<li>1 tbsp vegetable oil</li>
+											<li>40 g flour</li>
+											<li>1 tsp freshly ground black pepper</li>
+											<li>1 tsp paprika</li>
+											<li>1/4 tsp cayenne pepper, or to taste</li>
+											<li>½ tsp dried oregano</li>
+											<li>710 ml cold chicken broth</li>
+											<li>1 tsp Worcestershire sauce</li>
+											<li>225 g andouille sausage, sliced</li>
+											<li>250-375 g pulled chicken meat</li>
+											<li>60 g chopped green onions, plus more to garnish</li>
+										</ul>
+									</td>
+									<td>
+										<p>
+											Time: 60 min
+											<br>Serves: 4 large portions
+										</p>
+										<ol>
+											<li>Cut 5-6 slices of bacon</li>
+											<li>Throw in cold pan and cook until crisp</li>
+											<li>Remove bacon when cooked</li>
+											<li>Add celery and onions to bacon fat</li>
+											<li>Cook until onions start to turn translucent (5 min)</li>
+											<li>Add diced bell peppers and garlic</li>
+											<li>Cook until all veggies are soft (5 min)</li>
+											<li>Add flour to make roux (add oil or butter if needed)</li>
+											<li>Cook for about 5 min</li>
+											<li>Add and stir in seasonings</li>
+											<li>Deglaze with 118 ml chicken stock</li>
+											<li>Stir to remove lumps</li>
+											<li>Pour in rest of stock</li>
+											<li>Bring to a simmer</li>
+											<li>Add worcester sauce</li>
+											<li>Add sausage, chicken and bacon</li>
+											<li>Cook until chicken is cooked through</li>
+											<li>Add green onions</li>
+											<li>Taste for seasonings</li>
+
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Cajun Fettuccini Alfredo -->
+				<div class="card" id="CajunFettucciniAlfredoContainer">
+					<div class="card-header" id="CajunFettucciniAlfredo">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCajunFettucciniAlfredo" aria-expanded="true" aria-controls="collapseCajunFettucciniAlfredo">
+								<img src="https://i.imgur.com/pJftAsi.jpg" alt="Cajun Fettuccini Alfredo" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								<img id="tag" src="https://cdn0.iconfinder.com/data/icons/symbolicons-bbq/28/sausage-512.png">
+								Cajun Fettuccini Alfredo
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCajunFettucciniAlfredo" class="collapse" aria-labelledby="CajunFettucciniAlfredo" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.reddit.com/r/GifRecipes/comments/60s57g/onepot_cajun_fettuccine_alfredo/"> Cajun Fettuccini Alfredo </a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr id="CajunFettucciniAlfredo">
+									<td>
+										<p>Cajun Seasoning</p>
+										<ul>
+											<li>1 tsp cayenne pepper</li>
+											<li>1 tsp garlic powder</li>
+											<li>1 tsp paprika powder</li>
+											<li>1 tsp onion powder</li>
+											<li>1 tsp dried oregano</li>
+											<li>1 tsp salt</li>
+											<li>1 tsp black pepper</li>
+										</ul>
+										<p>Others:</p>
+										<ul>
+											<li>2 chicken breasts, sliced</li>
+											<li>450 g cooked andouille sausage</li>
+											<li>4 tbs olive oil</li>
+											<li>3 cloves of minced garlic</li>
+											<li>3 bell diced bell peppers</li>
+											<li>2 diced onions</li>
+											<li>1419 ml Milk</li>
+											<li>450 g fettuccini pasta</li>
+											<li>177 ml parmesan cheese</li>
+											<li>3 tbs chopped parsley</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time:30 min
+											<br>Serves: 6-8</p>
+										<ol>
+											<li>In a small bowl, combine all spices for the cajun seasoning and mix together. Set aside.</li>
+											<li>In a heavy bottom pot (such as a Dutch oven), heat 2 tablespoons of olive oil over medium heat.</li>
+											<li>Add the sliced chicken and 2½ tablespoons of the prepared cajun seasoning.</li>
+											<li>Add the andouille sausage and cook until the chicken is no longer pink, about 4-5 minutes.</li>
+											<li>Remove the meat from the pot and add the remaining olive oil.</li>
+											<li>Add the diced peppers and onions and cook until the onions are transparent and softened, about 5 minutes.</li>
+											<li>Add the milk and stir so that the seasoning is incorporated into the liquid.</li>
+											<li>Turn the heat to high and bring to a boil.</li>
+											<li>Add the uncooked fettuccine, stirring constantly until the noodles are al dente, about 10 minutes.</li>
+											<li>On low heat, add the meat back in and stir so that it’s evenly incorporated.</li>
+											<li>Add the cheese and parsley, and stir. Remove from the heat.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Cheeseburger Macaroni -->
+				<div class="card" id="CheeseburgerMacaroniContainer">
+					<div class="card-header" id="CheeseburgerMacaroni">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCheeseburgerMacaroni" aria-expanded="true" aria-controls="collapseCheeseburgerMacaroni">
+								<img src="https://i.imgur.com/gYYcor8.jpg?1" alt="Cheeseburger Macaroni" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								<img id="tag" src="http://webiconspng.com/wp-content/uploads/2017/09/Cheese-PNG-Image-81240.png">
+								Cheeseburger Macaroni
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCheeseburgerMacaroni" class="collapse" aria-labelledby="CheeseburgerMacaroni" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.kevinandamanda.com/recipes/dinner/cheeseburger-macaroni.html">Cheeseburger Macaroni</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>450 g ground beef</li>
+											<li>Taco seasoning</li>
+											<li>1 can diced tomatoes and green chili's</li>
+											<li>475 ml beef broth or water</li>
+											<li>236 g macaroni</li>
+											<li>2 tbs butter</li>
+											<li>2 tbs flour</li>
+											<li>177 ml milk</li>
+											<li>236 g shredded cheddar cheese</li>
+											<li>½ tsp salt</li>
+											<li>½ tsp pepper</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min</p>
+										<ol>
+											<li>Cook ground beef.</li>
+											<li>Stir in taco seasoning and tomatoes and chillies, water, macaroni.</li>
+											<li>Simmer 12-13 min.</li>
+											<li>Melt butter in sauce pan.</li>
+											<li>Add flour and cook for 5min until light brown.</li>
+											<li>Add milk and bring to boil. Whisk till smooth.</li>
+											<li>Remove from from heat and add cheddar. Stir until melted. Add salt and pepper.
+											</li>
+											<li>Add cheese sauce to macaroni and stir.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Chicken Riggies -->
+				<div class="card" id="ChickenRiggiesContainer">
+					<div class="card-header" id="ChickenRiggies">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseChickenRiggies" aria-expanded="true" aria-controls="collapseChickenRiggies">
+								<img src="https://i.imgur.com/ESHsYRa.jpg" alt="Chicken Riggies" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								<img id="tag" src="https://cdn0.iconfinder.com/data/icons/symbolicons-bbq/28/sausage-512.png">
+								Chicken Riggies
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseChickenRiggies" class="collapse" aria-labelledby="ChickenRiggies" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://foodwishes.blogspot.nl/2012/10/chicken-riggies-what-if-you-never-saw.html">Chicken Riggies</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>1 tbs olive oil</li>
+											<li>113 g italian sausage, crumbled</li>
+											<li>1 onion, sliced or diced</li>
+											<li>236 g mushrooms, sliced</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+											<li>680 g boneless skinless chicken thights, rougly chopped or cubed</li>
+											<li>118 ml Marsala wine (white wine)</li>
+											<li>1 can tomatoes</li>
+											<li>236 ml chicken broth</li>
+											<li>118 g heavy cream (creme fraiche)</li>
+											<li>118 ml water, or as needed</li>
+											<li>354 g chopped peppers and/or sweet peppers</li>
+											<li>118 g olive, halved</li>
+											<li>3 garlic cloves, minced</li>
+											<li>59 g italian parsley, chopped</li>
+											<li>453 g rigatoni</li>
+											<li>118 g Parmigiano-Reggiano or Romano cheese, grated</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 60 min
+											<br>Serving: 4</p>
+										<ol>
+											<li>Heat skillet on medium heat with a little bit of olive oil.</li>
+											<li>Add the italian sausage, onion, mushroom and brown for 6-7min.</li>
+											<li>Add chopped chicken and brown about 5 min on medium high.</li>
+											<li>Add the wine and cook about 2-3min.</li>
+											<li>Add the tomatoes, chicken broth, heavy cream and simmer for 30min.</li>
+											<li>Add the peppers, olives, garlic after it simmered for 10 min.</li>
+											<li>Add parsly right before pasta is done.</li>
+											<li>Cook pasta 1 min less than package.</li>
+											<li>Add rigatoni to the sauce and mix.</li>
+											<li>Add the cheese to the mix.</li>
+											<li>Turn off stove and let it sit for 1-2 min.</li>
+											<li>Plate and add a bit more cheese on top.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Chinese Lemon Chicken -->
+				<div class="card" id="ChineseLemonChickenContainer">
+					<div class="card-header" id="ChineseLemonChicken">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseChineseLemonChicken" aria-expanded="true" aria-controls="collapseChineseLemonChicken">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Chinese Lemon Chicken" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Chinese Lemon Chicken
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseChineseLemonChicken" class="collapse" aria-labelledby="ChineseLemonChicken" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://blogchef.net/chinese-lemon-chicken-recipe/">Chinese Lemon Chicken </a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>			
+								<tr>
+									<td>
+										<p>Marinade</p>
+										<ul>
+											<li>2 tbs soy sauce</li>
+											<li>½ tsp salt</li>
+										</ul>
+										<p>Batter</p>
+										<ul>
+											<li>2 eegs</li>
+											<li>59 ml corn flour</li>
+											<li>1 pinch of white pepper</li>
+											<li>oil (for frying)</li>
+										</ul>
+										<p>Sauce</p>
+										<ul>
+											<li>78 ml sugar</li>
+											<li>236 ml chicken broth</li>
+											<li>1 ½ tbs corn flour</li>
+											<li>2 tbs lemon juice (or whole lemon)</li>
+											<li>¾ tsp salt</li>
+											<li>3 slices of lemon</li>
+											<li>2 tbs oil</li>
+											<li>food colouring (optional)</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 45 min</p>
+										<ol>
+											<li>Cut the chicken in bite sized pieces and season in the marinade for about 30 min</li>
+											<li>Make the batter and coat the chicken</li>
+											<li>Deep fry the chicken until it's cooked then set aside to drain</li>
+											<li>Add everything except the oil to make the sauce</li>
+											<li>Heat oil in pan and stir into the sauce</li>
+											<li>Cook until well mixed and sauce becomes clear</li>
+											<li>Remove lemon slices and mix chicken with the sauce</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- CilantroLimeChicken -->
+				<div class="card" id="CilantroLimeChickenContainer">
+					<div class="card-header" id="CilantroLimeChicken">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCilantroLimeChicken" aria-expanded="true" aria-controls="collapseCilantroLimeChicken">
+								<img src="https://i.imgur.com/LvGAIqS.jpg" alt="Cilantro Lime Chicken" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Cilantro Lime Chicken
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCilantroLimeChicken" class="collapse" aria-labelledby="CilantroLimeChicken" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.reddit.com/r/GifRecipes/comments/4v5pdg/cilantro_lime_chicken/">Cilantro Lime Chicken</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>4 chicken tights (with bone and skin)</li>
+											<li>2 tbs extra virgin olive oil</li>
+											<li>4 tbs chopped cilantro</li>
+											<li>2 lime's juices</li>
+											<li>Crushed red pepper flakes</li>
+											<li>2 garlic cloves, minced</li>
+											<li>½ tsp cumin</li>
+											<li>Rice for serving</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 45 min</p>
+										<ol>
+											<li>Cook rice.</li>
+											<li>In a bowl whisk together olive oil, cilantro, lime, red pepper flakes, garlic, cumin.</li>
+											<li>Marinate chicken in the mix for 30 min - 2 hrs.</li>
+										</ol>
+										<p>Oven made</p>
+										<ol start="4">
+											<li>Preheat oven 220°C.</li>
+											<li>Add salt and pepper to chicken and cook on skin side for 5-6min. Flip and cook 2-3 min.</li>
+											<li>Put chicken in oven for 10-12 min and serve on rice</li>
+										</ol>
+										<p>Pan made</p>
+										<ol start="4">
+											<li>Add salt and pepper to chicken and cook on skin side for 5-6min. Flip and cook 2-3 min.</li>
+											<li>Add a bit of water and cover pan on low-cook for 5-6min and serve on rice.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- CindysPasta -->
+				<div class="card" id="CindysPastaContainer">
+					<div class="card-header" id="CindysPasta">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCindysPasta" aria-expanded="true" aria-controls="collapseCindysPasta">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Cindy's Pasta" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								Cindy's Pasta
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCindysPasta" class="collapse" aria-labelledby="CindysPasta" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>250 g ground meate</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+											<li>All seasoning</li>
+											<li>Soy sauce</li>
+											<li>Cayenne</li>
+											<li>Thyme</li>
+											<li>Pepper flakes</li>
+											<li>Broccoli</li>
+											<li>200 g macaroni</li>
+											<li>Creme fraiche</li>
+											<li>Shredded cheese</li>
+										</ul>
+										<p>Extra veggies that can be added:</p>
+										<ul>
+											<li>Cauliflower</li>
+											<li>Carrots</li>
+											<li>Mushrooms</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min</p>
+										<ol>
+											<li>Boil all the veggies (except mushrooms)</li>
+											<li>When they almost done, add pasta and cook until al dente</li>
+											<li>Coook the meat (add mushrooms when meat is almost done)</li>
+											<li>Mix pasta and veggies with meat</li>
+											<li>Mix in creme fraiche, cheese and pepper flakes</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- CreamyAvocadoPasta -->
+				<div class="card" id="CreamyAvocadoPastaContainer">
+					<div class="card-header" id="CreamyAvocadoPasta">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCreamyAvocadoPasta" aria-expanded="true" aria-controls="collapseCreamyAvocadoPasta">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Creamy Avocado Pasta" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Creamy Avocado Pasta
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCreamyAvocadoPasta" class="collapse" aria-labelledby="CreamyAvocadoPasta" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.reddit.com/r/vegangifrecipes/comments/7ivm4n/creamy_avocado_pasta/">Creamy Avocado Pasta</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>320 g conchiglie pasta</li>
+											<li>473 g frozen peas</li>
+											<li>250 g asparagus, sliced into 2½ cm pieces</li>
+											<li>1 ripe avocado, peeled and deseeded</li>
+											<li>2 garlic cloves</li>
+											<li>½ lemon juice</li>
+											<li>2 tbs tahini (toasted sesame seeds as replacement)</li>
+											<li>2 tbs olive oil</li>
+											<li>120 ml (dairy-free) milk</li>
+											<li>Small handful of pine nuts</li>
+											<li>Small handful of basil leavs</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 15 min
+											<br>Serving: 4</p>
+										<ol>
+											<li>Cook the pasta as per packet instructions. In the last 3 minutes add the asparagus and peas, and simmer until the asparagus starts to go a little soft.</li>
+											<li>Meanwhile, make the creamy sauce by blending the avocado, garlic cloves, lemon juice, tahini, olive oil and dairy-free milk until smooth.</li>
+											<li>Remove pasta from the hob and drain.</li>
+											<li>Pour the creamy avocado sauce onto the pasta and stir to combine. Then season with salt and pepper to taste, and stir again to combine.</li>
+											<li>Serve the creamy avocado pasta with a sprinkling of pine nuts and chopped basil.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Curry Rice -->
+				<div class="card" id="CurryRiceContainer">
+					<div class="card-header" id="CurryRice">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseCurryRice" aria-expanded="true" aria-controls="collapseCurryRice">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="CurryRice" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								Curry Rice
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseCurryRice" class="collapse" aria-labelledby="CurryRice" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>			
+								<tr>
+									<td>
+										<ul>
+											<li>Ground beef</li>
+											<li>Curry roux</li>
+											<li>1 garlic clove chopped</li>
+											<li>1 ginger chopped</li>
+											<li>1 onion chopped</li>
+											<li>Red wine</li>
+											<li>Water</li>
+											<li>Butter</li>
+											<li>Laurel</li>
+											<li>Honey</li>
+											<li>Coconut milk</li>
+
+										</ul>
+									</td>
+									<td>
+										<p>Time: 50 min</p>
+										<ol>
+											<li>Melt the butter and saute the garlic and ginger</li>
+											<li>Add onions and saute until transparent</li>
+											<li>Add the beef and cook until browned</li>
+											<li>Add red wine, laurel, honey, curry roux and water</li>
+											<li>Stir well</li>
+											<li>Add the coconut milk</li>
+
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Dragon Noodles -->
+				<div class="card" id="DragonNoodlesContainer">
+					<div class="card-header" id="DragonNoodles">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseDragonNoodles" aria-expanded="true" aria-controls="collapseDragonNoodles">
+								<img src="https://i.imgur.com/spcnfEr.jpg" alt="Dragon Noodles" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								 <img id="tag" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/boiled-egg-breakfast-food-33b755dbe8866b7b-512x512.png">
+								Dragon Noodles
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseDragonNoodles" class="collapse" aria-labelledby="DragonNoodles" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.budgetbytes.com/2012/08/spicy-noodles/">Dragon Noodles </a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>			
+								<tr>
+									<td>
+										<ul>
+											<li>115g lo mien noodles</li>
+											<li>2tbs butter</li>
+											<li>crushed red pepper</li>
+											<li>2 eggs</li>
+											<li>1 tbs brown sugar</li>
+											<li>1 tbs soy sauce</li>
+											<li>1 tbs sriracha</li>
+											<li>1 handful fresh cilantro</li>
+											<li>1 sliced green onion</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 15 min</p>
+										<ol>
+											<li>Boil the noodles</li>
+											<li>In a bowl stir the brown sugar, soy sauce and sriracha</li>
+											<li>In a skillet add butter</li>
+											<li>When butter is melted add red pepper and egg</li>
+											<li>Cook eggs until done</li>
+											<li>When noodles are done add them to the egg and add the sauce. Stir everything</li>
+											<li>Sprinkle the cilantro and green onion on top</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Enchelada Lasagna -->
+				<div class="card" id="EncheladaLasagnaContainer">
+					<div class="card-header" id="EncheladaLasagna">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseEncheladaLasagna" aria-expanded="true" aria-controls="collapseEncheladaLasagna">
+								<img src="https://i.imgur.com/aojsg00.jpg" alt="Enchelada Lasagna" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Enchelada Lasagna
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseEncheladaLasagna" class="collapse" aria-labelledby="EncheladaLasagna" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href=""></a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Falafel -->
+				<div class="card" id="FalafelContainer">
+					<div class="card-header" id="Falafel">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseFalafel" aria-expanded="true" aria-controls="collapseFalafel">
+								<img src="https://i.imgur.com/nLwgBk0.jpg" alt="Falafel" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Falafel
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFalafel" class="collapse" aria-labelledby="Falafel" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href= "http://foodwishes.blogspot.nl/2015/03/falafel-opposite-of-how-these-will-make.html">Falafel</a> 
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>               
+								<tr>
+									<td>
+										<ul>
+											<li>236 ml dried garbanzo beans aka chickpeas</li>
+											<li>1/2 yellow onion, diced</li>
+											<li>4 cloves minced garlic</li>
+											<li>7 g chopped Italian parsley</li>
+											<li>7 g chopped cilantro</li>
+											<li>1 1/2 tsp salt, or to taste</li>
+											<li>1 tsp freshly ground black pepper</li>
+											<li>1 tsp cumin</li>
+											<li>1/2 tsp ground coriander</li>
+											<li>1/8 tsp cayenne pepper</li>
+											<li>1/4 tsp baking soda</li>
+											<li>1 rounded tablespoon flour</li>
+											<li>2 tsp lemon juice</li>
+										</ul>
+										<p> For in the pita bread:</p>
+										<ul>
+											<li> Jalapeño peppers</li>
+											<li>Red Cabbage</li>
+											<li>Tomatoes</li>
+											<li>Thinly sliced carrots</li>
+											<li>Lettuce</li>
+											<li>Garlic sauce</li>
+											<li>Hot sauce</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time:  3 hours <br> Serving: 12 balls</p>
+										<ol>
+											<li>Drain the garbanzo beans very well</li>
+											<li>Add garbanzo beans to a food processor</li>
+											<li>Add the diced onion and minced garlic</li>
+											<li>Add a mix of parsley and cilantro</li>
+											<li>Add the salt, blackpepper cumin and cayenne</li>
+											<li>Add the baking</li>
+											<li>add the flour (depending on how bready you want it)</li>
+											<li>Squeeze in the lemon juice</li>
+											<li>Process all the ingredients in the foodprocessor</li>
+											<li>The mix should be very finely ground, but no a paste</li>
+											<li>Let rest for 1-2 hours</li>
+											<li>Form the mix into balls or shape of your choice</li>
+											<li> Deepfry for 5 minutes or untill brown and crispy</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- FancySimpleRice -->
+				<div class="card" id="FancySimpleRiceContainer">
+					<div class="card-header" id="FancySimpleRice">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseFancySimpleRice" aria-expanded="true" aria-controls="collapseFancySimpleRice">
+								<img src="https://i.imgur.com/y1xYlsM.jpg" alt="Fancy Simple Rice" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Fancy Simple Rice
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFancySimpleRice" class="collapse" aria-labelledby="FancySimpleRice" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>Rice</li>
+											<li>All seasoning</li>
+											<li>Salt</li>
+											<li>Thyme</li>
+											<li>Rice Vinegar</li>
+											<li>Sugar</li>
+											<li>Cucumber</li>
+											<li>Fried onions</li>
+											<li>Scallions (for garnish)</li>
+										</ul>
+										<p>Can also be added:</p>
+										<ul>
+											<li>Carrots</li>
+											<li>Peas</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 20 min</p>
+										<ol>
+											<li>Cook the rice with all the seasonings</li>
+											<li>Rice should be soft and clingy</li>
+											<li>When rice is done, stir in rice vinegar and sugar</li>
+											<li>Mix in diced cucumbers and other veggies</li>
+											<li>Garnish with fried onions and scallions</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Fried Rice -->
+				<div class="card" id="FriedRiceContainer">
+					<div class="card-header" id="FriedRice">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseFriedRice" aria-expanded="true" aria-controls="collapseFriedRice">
+								<img src="https://i.imgur.com/L9Ka4T7.jpg" alt="Fried Rice" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Fried Rice
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFriedRice" class="collapse" aria-labelledby="FriedRice" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>200 g rice</li>
+											<li>200 g chicken breast, cut into small pieces</li>
+											<li>1 can knak worstjes</li>
+											<li>1 onion, finely chopped</li>
+											<li>1 tomato, finely chopped</li>
+											<li>1 green bell pepper, finely chopped</li>
+											<li>1 celery stalk, finely chopped</li>
+											<li>1 carrot, finely chopped</li>
+											<li>2 eggs</li>
+											<li>2 tbs ketchup</li>
+											<li>2 tbs soy sauce</li>
+											<li>2 tbs oil</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 40 min</p>
+										<ol>
+											<li>Cut and season the chicken breast to taste.</li>
+											<li>Cut the sausages in small pieces.</li>
+											<li>Cut all the vegetables into small pieces and set asside.</li>
+											<li>Cook the rice</li>
+											<li>In a wok heat up the oil.</li>
+											<li>Cook the chicken until brown.</li>
+											<li>Add the vegetables and cook for about 1 min through.</li>
+											<li>Add the rice and mix well.</li>
+											<li>Beat the 2 eggs well and add to one side of the wok. (where there are no rice mixture)</li>
+											<li>Cook the egg stirring making it scrambled.</li>
+											<li>Mix egg and rice mixture together.</li>
+											<li>Add ketchup and soy sauce to the mixture and stir well.</li>
+											<li>Serve hot.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Fried Rice Japanese -->
+				<div class="card" id="FriedRiceJapaneseContainer">
+					<div class="card-header" id="FriedRiceJapanese">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseFriedRiceJapanese" aria-expanded="true" aria-controls="collapseFriedRiceJapanese">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Fried Rice Japanese" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								<img id="tag" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/boiled-egg-breakfast-food-33b755dbe8866b7b-512x512.png">
+								Fried Rice Japanese
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFriedRiceJapanese" class="collapse" aria-labelledby="FriedRiceJapanese" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>2 tbs veggie oil</li>
+											<li>1 tsp soy sauce</li>
+											<li>1 onion</li>
+											<li>1 green onion</li>
+											<li>2 tbs chicken stock powder</li>
+											<li>250 g rice</li>
+											<li>2 eggs</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 25 min</p>
+										<ol>
+											<li>Add rice, chicken stock powder (egg) and mix.</li>
+											<li>Heat frying pan till it’s super hot and add oil and the rice.</li>
+											<li>Spread the rice out so they don’t stick together.</li>
+											<li>Add the onion to the rice.</li>
+											<li>On one side of the pan add the egg and stir fry together with the rice (add oil beforehand if needed)</li>
+											<li>Add soy sauce around the rice at the side of the pan</li>
+											<li>Add salt and pepper to taste</li>
+											<li>Add the green onion</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- General Tso Chicken -->
+				<div class="card" id="GeneralTsoChickenContainer">
+					<div class="card-header" id="GeneralTsoChicken">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseGeneralTsoChicken" aria-expanded="true" aria-controls="collapseGeneralTsoChicken">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="General Tso's Chicken" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								General Tso's Chicken
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseGeneralTsoChicken" class="collapse" aria-labelledby="GeneralTsoChicken" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://rasamalaysia.com/general-tsos-chicken/2/">General Tso's Chicken</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr id="GeneralTsoChicken">
+									<td>
+										<ul>
+											<li>283 g chicken</li>
+											<li>½ tbs xiaoshing wine (dry white wine)</li>
+											<li>Salt</li>
+											<li>½5 tbs cornstarch</li>
+											<li>1 ½ tbs oil</li>
+											<li>3 slices ginger, minced</li>
+											<li>1 garlic clove, minced</li>
+											<li>4-5 dried red chillies, deseeded</li>
+
+											<li>2 stalks green onion, white part</li>
+											<li>2 ½ -3 tbs rice vinegar</li>
+											<li>2 ½ tbs soy sauce</li>
+											<li>½ tbs dark soy</li>
+											<li>1 tsp hoisin sauce</li>
+											<li>60 ml water</li>
+											<li>2 ½ tbs sugar</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 20 min</p>
+										<ol>
+											<li>Marinade chicken with xiaoshing and salt for 15min.</li>
+											<li>Mix all ingredients for sauce in a bowl and set aside.</li>
+											<li>Coat chicken with cornstarch and deep fry.</li>
+											<li>Heat up oil in pan</li>
+											<li>Add garlic, ginger and red chillies</li>
+											<li>Fry them for 2 min</li>
+											<li>Add sauce to pan and reduce</li>
+											<li>Stir in the fried chicken</li>
+											<li>Stir in green onion stalks</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Gyoza -->
+				<div class="card" id="GyozaContainer">
+					<div class="card-header" id="Gyoza">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseGyoza" aria-expanded="true" aria-controls="collapseGyoza">
+								<img src="https://i.imgur.com/4yknmza.jpg" alt="Gyoza" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn.pixabay.com/photo/2016/10/18/14/07/steak-1750291_960_720.png">
+								Gyoza (Potstickers)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseGyoza" class="collapse" aria-labelledby="Gyoza" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://damndelicious.net/2014/03/01/potstickers/">
+									Gyoza (Potstickers)
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>450 g ground pork</li>
+											<li>236 g green cabbage, shredded</li>
+											<li>85 g shiitake mushrooms, diced</li>
+											<li>2 garlic cloves, pressed</li>
+											<li>2 green onions, thinly sliced</li>
+											<li>1 tbs hoisin</li>
+											<li>1 tbs ginger, freshly grated</li>
+											<li>2 tsp sesame oil</li>
+											<li>1 tsp sriracha, or more to taste</li>
+											<li>¼ tsp white pepper</li>
+											<li>36 won ton wrappers (2 packages gyoza wrappers)</li>
+											<li>2 tbs vegetable oil</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min
+											<br>Serving: 6</p>
+										<ol>
+											<li>In a large bowl, combine pork, cabbage, mushrooms, garlic, green onions, hoisin, ginger, sesame oil, Sriracha and white pepper.</li>
+											<li>Assemble the gyoza.</li>
+											<li>Heat vegetable oil in a large skillet over medium heat.</li>
+											<li>Add potstickers in a single layer and cook until golden and crisp, about 1 min.</li>
+											<li>Add about 2 tbs water and cover to steam, about 2-3 min.</li>
+											<li>Remove lid and cook about 1 min or until bottom is crispy.</li>
+											<li>Serve immediately with sauce.</li>
+										</ol>
+										<p>To assemble the gyoza</p>
+										<ol>
+											<li>Place wrappers on a work surface</li>
+											<li>Spoon 1 tablespoon of the pork mixture into the center of each wrapper.</li>
+											<li>Using your finger, rub the edges of the wrappers with water.</li>
+											<li>Fold the dough over the filling to create a half-moon shape, pinching the edges to seal.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Gyoza Sauce -->
+				<div class="card" id="GyozaSauceContainer">
+					<div class="card-header" id="GyozaSauce">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseGyozaSauce" aria-expanded="true" aria-controls="collapseGyozaSauce">
+								<img src="https://i.imgur.com/4yknmza.jpg" alt="Gyoza Sauce" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Gyoza Sauce
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseGyozaSauce" class="collapse" aria-labelledby="GyozaSauce" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.cookswithcocktails.com/homemade-gyoza-recipe/">Gyoza Sauce</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>4 tbs rice vinegar</li>
+											<li>4 tbs soy sauce</li>
+											<li>2 garlic cloves, pressed or finely chopped</li>
+											<li>1 tsp ginger, finely chopped or grated</li>
+											<li>1 green onion, finely sliced</li>
+											<li>1 tsp sesame oil</li>
+											<li>¼ tsp chili flakes</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 2 min</p>
+										<ol>
+											<li>In a medium bowl, mix together the rice vinegar, soy sauce, garlic, ginger, sesame oil, green onion and chili flakes.</li>
+											<li>Let the sauce sit for around 15 mins before you start dipping.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Hamburger Buns -->
+				<div class="card" id="HamburgerBunsContainer">
+					<div class="card-header" id="HamburgerBuns">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseHamburgerBuns" aria-expanded="true" aria-controls="collapseHamburgerBuns">
+								<img src="https://i.imgur.com/drHvkNw.jpg" alt="Hamburger Buns" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Hamburger Buns
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseHamburgerBuns" class="collapse" aria-labelledby="HamburgerBuns" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="">Hamburger Buns</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>1 package (2 1/2 tsp) dry active yeast</li>
+											<li>236 ml very warm water</li>
+											<li>1 large egg</li>
+											<li>3 tbs butter</li>
+											<li>3 tbs sugar</li>
+											<li>1 ¼ tsp salt</li>
+											<li>450 g All Purpose flour</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 4 hour
+											<br>Serves: 8 pieces</p>
+										<ol>
+											<li>Add yeast 65 g flower and 236 ml of very warm water (45°C) to a bowl</li>
+											<li>Mix and let sit for 15 min to activate yeast</li>
+											<li>After 15 min it should be kind of foamy (like head of a beer)</li>
+											<li>Add and mix the egg, melted butter, sugar, salt</li>
+											<li>Add rest of flower and knead until dough is soft and sticky</li>
+											<li>Dough should feel very soft, but shouldn't stick to your fingers</li>
+											<li>Coat bowl and dough in oil and let rise in warm place for 2 hours</li>
+											<li>Take out air bubbles and form a rectangle</li>
+											<li>Cut 8 equal pieces</li>
+											<li>Round the 8 pieces to see if they are all even in size</li>
+											<li>Pad them down into disk shapes and put on sheetpan</li>
+											<li>dust lightly with flower</li>
+											<li>Place plastic over top and let rise at room temperature for 1 hour</li>
+											<li>Pre-heat over to 190°C</li>
+											<li>Mix egg and milk to make a wash</li>
+											<li>Very gently brush surface with the wash</li>
+											<li>Add sesame seeds onto buns</li>
+											<li>Bake for about 15 min</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Hoisin Meatballs -->
+				<div class="card" id="HoisinMeatballsContainer">
+					<div class="card-header" id="HoisinMeatballs">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseHoisinMeatballs" aria-expanded="true" aria-controls="collapseHoisinMeatballs">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Hoisin Meatballs" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								Hoisin Meatballs
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseHoisinMeatballs" class="collapse" aria-labelledby="HoisinMeatballs" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://damndelicious.net/2012/12/16/hoisin-asian-meatballs-sundaysupper/">
+									Hoisin Meatballs
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr id="HoisinMeatballs">
+									<td>
+										<p>Meatball</p>
+										<ul>
+											<li>450 g ground beef</li>
+											<li>1 tsp toasted sesame oil</li>
+											<li>118 g panko</li>
+											<li>¼ tsp ground ginger</li>
+											<li>1 egg</li>
+											<li>2 garlic cloves, minced</li>
+											<li>3 green onions, thinly sliced</li>
+											<li>sesame seeds</li>
+										</ul>
+										<p>Hoisin Sauce</p>
+										<ul>
+											<li>4 tbs hoisin sauce</li>
+											<li>2 tbs rice vinegar</li>
+											<li>1 tbs soy sauce</li>
+											<li>½ tsp toasted sesame oil</li>
+											<li>2 garlic cloves</li>
+											<li>½ tsp ginger, grounded</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time:30 min
+											<br>Yield: 18 meatballs
+										</p>
+										<p>General</p>
+										<ol>
+											<li>In bowl, mix ground beef, sesame oil, panko, ginger, egg, garlic and green onion.</li>
+											<li>Make meatballs.</li>
+										</ol>
+										<p>Oven</p>
+										<ol start="3">
+											<li>Preheat oven 205°C</li>
+											<li>put meatballs in oven and bake for 12 min or until cooked through.</li>
+										</ol>
+										<p>Pan</p>
+										<ol start="3">
+											<li>Fry meatballs untill cooked through.</li>
+										</ol>
+										<p>General</p>
+										<ol start="5">
+											<li>In bowl add hoisin sauce, vinegar, soy sauce, sesame oil, garlic and ginger and mix.</li>
+											<li>Serve on meatballs with sesame seeds and green onion on it for garnish.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Japanese Chicken Curry -->
+				<div class="card" id="JapaneseChickenCurryContainer">
+					<div class="card-header" id="JapaneseChickenCurry">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseJapaneseChickenCurry" aria-expanded="true" aria-controls="collapseJapaneseChickenCurry">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Japanese Chicken Curry" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Japanese Chicken Curry
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseJapaneseChickenCurry" class="collapse" aria-labelledby="JapaneseChickenCurry" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.justonecookbook.com/simple-chicken-curry/">
+									Japanese Chicken Curry
+								</a> 
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>181 g boneless skinless chicken thighs (or beef, pork, seafood, tofu, vegetables)</li>
+											<li>Kosher salt</li>
+											<li>Freshly ground black pepper</li>
+											<li>⅔ carrot</li>
+											<li>⅔ onion</li>
+											<li>⅓-⅔ potato</li>
+											<li>⅕ tbs ginger</li>
+											<li>⅔ garlic clove</li>
+											<li>½ tbs neutral flavour oil (vegetable, canola, etc.)</li>
+											<li>333 ml water (or chicken broth)</li>
+											<li>⅓ apple (Fuji apple)</li>
+											<li>⅓ tsp honey</li>
+											<li>⅓ box Japanese curry roux</li>
+											<li>½ tbs soy sauce</li>
+											<li>⅓ tbs ketchup</li>
+										</ul>
+										<p>Toppings</p>
+										<ul>
+											<li>Soft/hard boiled egg</li>
+											<li>Fukujinzuke (pickled daikon)</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 1 h 30 min<br>
+										Serving: 2</p>
+										<ol>
+											<li>Cut chicken into bite size pieces and season with salt and pepper.</li>
+											<li>Cut carrots in rangiri (rolling wedges).</li>
+											<li>Cut the onions in wedges.</li>
+											<li>Cut the potatoes in pieces of 4 cm.</li>
+											<li>Soak the potatoes in water for 15 min.</li>
+											<li>Grate the ginger and crush the garlic.</li>
+											<li>Heat the oil in alarge pot over medium heat.</li>
+											<li>Saute the onion until they become translucent.</li>
+											<li>Add the ginger and garlic.</li>
+											<li>Add the chicken and cook until the chicken changes colour.</li>
+											<li>Add the carrot and mix.</li>
+											<li>Add the chicken broth (or water)</li>
+											<li>Bring to a boil and skim excess fat.</li>
+											<li>Peel the apple and coarsly grate it into the broth.</li>
+											<li>Add honey and salt.</li>
+											<li>Simmer 20 min, stirring occasionally.</li>
+											<li>Add the potatoes and cook for 15 min.</li>
+											<li>Add the curry roux and stir until combined.</li>
+											<li>Add soy sauce and ketchup.</li>
+											<li>Simmer uncovered on low heat untill the curry becomes thick.</li>
+											<li>Serve the curry on rice and garnish with boiled egg and Fukujinzuke.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Kaasbal -->
+				<div class="card" id="KaasbalContainer">
+					<div class="card-header" id="Kaasbal">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseKaasbal" aria-expanded="true" aria-controls="collapseKaasbal">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Kaasbal" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://webiconspng.com/wp-content/uploads/2017/09/Cheese-PNG-Image-81240.png">
+								Kaasbal
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseKaasbal" class="collapse" aria-labelledby="Kaasbal" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href=""></a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>250 g young cheese</li>
+											<li>250 g old cheese</li>
+											<li>1 packet Backing</li>
+											<li>3 eggs</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+											<li>200 g flower</li>
+											<li>A little bit of water</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 50 min</p>
+										<ol>
+											<li>Add both cheeses into a bowl</li>
+											<li>Add flour and egg</li>
+											<li>Mix until it comes together</li>
+											<li>Add water when needed for easier mixing</li>
+											<li>Mix in salt and pepper to taste</li>
+											<li>Make small ball-form pieces</li>
+											<li>Deepfry until golden brown</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Ko'i Lechi -->
+				<div class="card" id="KoiLechiContainer">
+					<div class="card-header" id="KoiLechi">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseKoiLechi" aria-expanded="true" aria-controls="collapseKoiLechi">
+								<img src="https://i.imgur.com/ifChnq4.jpg" alt="Ko'i Lechi" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://icons.iconarchive.com/icons/icons-land/3d-food/256/Cake-Chocolate-icon.png">
+								Ko'i Lechi
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseKoiLechi" class="collapse" aria-labelledby="KoiLechi" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.antilliaans-eten.nl/recepten/koi-lechi-snoep-van-poedermelk/">
+									Ko'i Lechi
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>500 g powdered sugar</li>
+											<li>400 g powdered milk</li>
+											<li>1 pinch of salt</li>
+											<li>1 tsp vanilla extract</li>
+											<li>1 can condensed milk</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min<br>
+										Serving: 30-40 pieces</p>
+										<ol>
+											<li>Mix the powdered sugar, powdered milk and salt.</li>
+											<li>Add the vanilla extract to the condensed milk.</li>
+											<li>Add the condensed milk to the dry ingredients until it becomes a dough.</li>
+											<li>If the dough is still sticky after mixing, add more powdered milk until it doesn't stick anymore.</li>
+											<li>Roll the dough until it is 1 cm thick.</li>
+											<li>Cut into pieces and leave to dry.</li>
+										</ol>
+										<p>*Food colouring can be added to the dough to give it colour.</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Lemon Garlic Chicken Pasta -->
+				<div class="card" id="LemonGarlicChickenPastaContainer">
+					<div class="card-header" id="LemonGarlicChickenPasta">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseLemonGarlicChickenPasta" aria-expanded="true" aria-controls="collapseLemonGarlicChickenPasta">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Lemon Garlic Chicken Pasta" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Lemon Garlic Chicken Pasta
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseLemonGarlicChickenPasta" class="collapse" aria-labelledby="LemonGarlicChickenPasta" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.number-2-pencil.com/2014/01/10/one-pan-lemon-garlic-chicken-pasta/">
+									Lemon Garlic Chicken Pasta
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>59 ml olive oil</li>
+											<li>450 g bonesres skinless chicken breasts, cut into 2½ cm pieces</li>
+											<li>1 tsp kosher salt</li>
+											<li>4 cloves garlic, minced</li>
+											<li>Ground black pepper</li>
+											<li>473 ml chicken broth</li>
+											<li>236 ml water</li>
+											<li>250 g penne pasta</li>
+											<li>1 lemon zested and juiced</li>
+											<li>1 lemon for garnish</li>
+											<li>236 g parmesan cheese,shredded</li>
+											<li>236g fresh basil leaves</li>
+										</ul>
+									</td>
+									<td>
+										<p>
+											Time: 25 min <br>Serving: 4
+										</p>
+										<ol>
+											<li>Cook the chicken in oil after seasoning it till it’s brown.</li>
+											<li>Add garlic to the chicken and saute for about a minute.</li>
+											<li>Add chicken broth, water and uncooked pasta to the pan and cook with cover on low heat for 15 min.</li>
+											<li>When pasta is cooked, remove cover and reduce water by cooking on medium heat.</li>
+											<li>Stir in the lemon juice, zest, parmesan cheese and basil.</li>
+											<li>Season with additional salt and pepper and garnish with lemon slices.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Lemon Spinach Pasta -->
+				<div class="card" id="LemonSpinachPastaContainer">
+					<div class="card-header" id="LemonSpinachPasta">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseLemonSpinachPasta" aria-expanded="true" aria-controls="collapseLemonSpinachPasta">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Lemon Spinach Pasta" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Lemon Spinach Pasta
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseLemonSpinachPasta" class="collapse" aria-labelledby="LemonSpinachPasta" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.yummly.com/recipe/external/Lemony-Spinach-Carbanara-493562">Lemon Spinach Pasta</a> </td>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>150 g linguini</li>
+											<li>1 egg (optional)</li>
+											<li>60 ml creme fraiche</li>
+											<li>60 ml finely grated parmesan cheese</li>
+											<li>300 g baby leaf spinach</li>
+											<li>1 lemon zest</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+											<li>Pepper Flakes</li>
+										</ul>
+									</td>
+									<td>
+										 <p>Time: 30 min</p>
+										<ol>
+											<li>Boil pasta in salty water to al dente</li>
+											<li>Grate the cheese and beat the egg( if using)</li>
+											<li>Drain pasta leaving a bit of the water. Add the spinach in and boil for a bit</li>
+											<li>Add the creme fraiche, lemon zest and cheese (and egg) and stir</li>
+											<li>Add salt and pepper to taste. (pepper flakes for a bit of spicy taste)</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Macaroni Salad -->
+				<div class="card" id="MacaroniSaladContainer">
+					<div class="card-header" id="MacaroniSalad">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseMacaroniSalad" aria-expanded="true" aria-controls="collapseMacaroniSalad">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Macaroni Salad" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Macaroni Salad
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseMacaroniSalad" class="collapse" aria-labelledby="MacaroniSalad" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.allrecipes.com/recipe/81108/classic-macaroni-salad/">
+									Macaroni Salad
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>140 g macaroni</li>
+											<li>232 g mayonnaise</li>
+											<li>59 ml distilled white vinegar</li>
+											<li>150 g white sugar</li>
+											<li>2½ tbs yellow mustard</li>
+											<li>1½ tsp salt</li>
+											<li>½ tsp ground black pepper</li>
+											<li>1 onion, chopped</li>
+											<li>2 celery stalks, chopped</li>
+											<li>1 green bell pepper, seeded and chopped</li>
+											<li>25 g carrot, grated (about 1 carrot)</li>
+											<li>2 tbs pimento peppers, chopped</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 4 h 30 min<br>
+										Serving: 10</p>
+										<ol>
+											<li>Bring a large pot of lightly salted water to a boil.</li>
+											<li>Add the macaroni, and cook until tender, about 8 minutes.</li>
+											<li>Rinse under cold water and drain.</li>
+											<li>In a large bowl, mix together the mayonnaise, vinegar, sugar, mustard, salt and pepper.</li>
+											<li>Stir in the onion, celery, green pepper, carrot, pimentos and macaroni.</li>
+											<li>Refrigerate for at least 4 hours before serving, but preferably overnight.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- One Pan Chicken Alfredo -->
+				<div class="card" id="OnePanChickenAlfredoContainer">
+					<div class="card-header" id="OnePanChickenAlfredo">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseOnePanChickenAlfredo" aria-expanded="true" aria-controls="collapseOnePanChickenAlfredo">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="One Pan Chicken Alfredo" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								One Pan Chicken Alfredo
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseOnePanChickenAlfredo" class="collapse" aria-labelledby="OnePanChickenAlfredo" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.number-2-pencil.com/2013/06/06/one-pan-chicken-alfredo/">One Pan Chicken Alfredo</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>3tbs olive oil</li>
+											<li>562 g chicken</li>
+											<li>2 garlic cloves</li>
+											<li>37 ml chicken broth</li>
+											<li>236 ml heavy cream</li>
+											<li>227 g penne pasta</li>
+											<li>473 ml shredded parmesan cheese</li>
+											<li>Salt </li>
+											<li>Pepper</li>
+											<li>Parsley </li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 30 min</p>
+										<ol>
+											<li>Cut chicken in pieces and season</li>
+											<li>Heat oil in pan and cook chicken till brown</li>
+											<li>Add garlic and saute for 1 min</li>
+											<li>Add chicken broth, cream and penne</li>
+											<li>Bring to boil, then cover and simmer for 15- 20 min or until pasta is cooked</li>
+											<li>Remove heat and add cheese</li>
+											<li>Add salt pepper to taste and parsley for garnish</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- One Pan Skillet Lasagna -->
+				<div class="card" id="OnePanSkilletLasagnaContainer">
+					<div class="card-header" id="OnePanSkilletLasagna">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseOnePanSkilletLasagna" aria-expanded="true" aria-controls="collapseOnePanSkilletLasagna">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="One Pan Skillet Lasagna" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								<img id="tag" src="https://cdn0.iconfinder.com/data/icons/symbolicons-bbq/28/sausage-512.png">
+								One Pan Skillet Lasagna
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseOnePanSkilletLasagna" class="collapse" aria-labelledby="OnePanSkilletLasagna" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.number-2-pencil.com/2013/08/30/skillet-lasagna-easy-one-pan-meal/">One Pan Skillet Lasagna</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>2 tbs olive oil</li>
+											<li>450 g italian turkey sausage or ground beef</li>
+											<li>½ onion, diced</li>
+											<li>2 garlic cloves, minced</li>
+											<li>510 g diced tomatoes</li>
+											<li>225 g can tomato sauce</li>
+											<li>355 ml chicken broth</li>
+											<li>255 g ravioli</li>
+											<li>225 gmozzarella, cubed</li>
+											<li>118 ml parmesan, grated</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 25 min</p>
+										<ol>
+											<li>Heat oil and saute onions and garlic until onions are translucent</li>
+											<li>Add sausage (ground beef) and cook</li>
+											<li>Add tomatoes, tomato sauce, chicken broth and ravioli</li>
+											<li>Simmer for 15-20 min or until ravioli is cooked and sauce has thickened</li>
+											<li>Stir in mozzarella and parmesan</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Orange Chicken -->
+				<div class="card" id="OrangeChickenContainer">
+					<div class="card-header" id="OrangeChicken">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseOrangeChicken" aria-expanded="true" aria-controls="collapseOrangeChicken">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Orange Chicken" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								Orange Chicken
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseOrangeChicken" class="collapse" aria-labelledby="OrangeChicken" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.foodnetwork.com/recipes/ree-drummond/orange-chicken-2495688">
+									Orange Chicken
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<p>Chicken</p>
+										<ul>
+											<li>2 tbs cornstarch</li>
+											<li>4 egg whites</li>
+											<li>4 boneless chicken thights, cut into bite-size pieces</li>
+										</ul>
+										<p>Sauce</p>
+										<ul>
+											<li>118 ml orange juice</li>
+											<li>1 tbs soy sauce</li>
+											<li>1 tbs brown sugar</li>
+											<li>1 tbs rice wine vinegar</li>
+											<li>¼ tsp sesame oil</li>
+											<li>Salt</li>
+											<li>Crushed red pepper</li>
+											<li>1 garlic clove, pressed</li>
+											<li>Ginger, minced or grated</li>
+											<li>1 tsp cornstarch</li>
+											<li>Vegetable oil or peanut oil for frying</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 50 min<br>
+										Serving: 4</p>
+										<ol>
+											<li>Season chicken.</li>
+											<li>Add cornstarch (corn flour), egg whites (eggs if lazy) and whisk in a bowl.</li>
+											<li>Add chicken and marinate for 5-10 min.</li>
+											<li>Cook orange juice, soy sauce, sugar, vinegar, sesame oil, salt, crushed red pepper, garlic, ginger about 5 min (till thickens).</li>
+											<li>Mix the cornstarch with 59ml water and stir.</li>
+											<li>Add 2 tbs of that to the cooking orange juice mixture. (add ½ tbs corn flour to orange juice mixture if lazy).</li>
+											<li>Deep fry chicken (preferably twice).</li>
+											<li>Toss chicken in the sauce.</li>
+											<li>Serve chicken.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Pan Sera -->
+				<div class="card" id="PanSeraContainer">
+					<div class="card-header" id="PanSera">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapsePanSera" aria-expanded="true" aria-controls="collapsePanSera">
+								<img src="https://i.imgur.com/s5gsa9b.jpg" alt="Pan Sera" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Pan Sera
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapsePanSera" class="collapse" aria-labelledby="PanSera" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.antilliaans-eten.nl/recepten/pan-sera-antilliaanse-broodjes/"> Pan Sera </a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>500 g flour</li>
+											<li>1 packet of yeast</li>
+											<li>2 tbs sugar</li>
+											<li>80 g butter</li>
+											<li>250 ml cold water</li>
+											<li>½ tsp salt</li>
+											<li>2 tbs milk</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 2 hours <br> Serves: 10 pieces</p>
+										<ol>
+											<li>Add and mix the flour, yeast, sugar and salt in a bowl</li>
+											<li>Melt butter and pour in into a self made well in the middle</li>
+											<li>Pour half of the water and start kneading</li>
+											<li>Keep kneading, pouring water when necessary</li>
+											<li>The dough should be firm and non-sticky</li>
+											<li>Knead for another 10 min</li>
+											<li>Bring the dough to a flour covered work area</li>
+											<li>Cover with plastic and let rest for 30 min</li>
+											<li>Devide into 10 equal pieces</li>
+											<li>Roll into balls and let rest for 10 min covered</li>
+											<li>Flatten the balls to about 1 cm</li>
+											<li>Bring to a flour covered sheetpan</li>
+											<li>Cover with plastic and let rise for 1 hour</li>
+											<li>Pre-heat over to 200°C</li>
+											<li>Poke the balls with a fork to make patterns</li>
+											<li>Wash them with milk</li>
+											<li>Bake for 20 mins</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Pasta Sauce 2 -->
+				<div class="card" id="PastaSauce2Container">
+					<div class="card-header" id="PastaSauce2">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapsePastaSauce2" aria-expanded="true" aria-controls="collapsePastaSauce2">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Pasta Sauce 2" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Pasta Sauce (2)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapsePastaSauce2" class="collapse" aria-labelledby="PastaSauce2" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>Olive oil</li>
+											<li>Garlic</li>
+											<li>Tomatoes, chopped</li>
+											<li>Pepper</li>
+											<li>White vinegar</li>
+											<li>Onion</li>
+											<li>Celery</li>
+											<li>Salt</li>
+											<li>Tomato pure</li>
+											<li>Sugar</li>
+											<li>Red pepper flakes</li>
+											<li>Italian seasoning</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 15 min</p>
+										<ol>
+											<li>Add all the ingredients together in a sauce pan.</li>
+											<li>Add the italian seasoning, salt and pepper to taste.</li>
+											<li>Add water occasionally when stirring the sauce.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Pasta Sauce 3 -->
+				<div class="card" id="PastaSauce3Container">
+					<div class="card-header" id="PastaSauce3">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapsePastaSauce3" aria-expanded="true" aria-controls="collapsePastaSauce3">
+								<img src="https://i.imgur.com/cgP9pcG.jpg" alt="Pasta Sauce 3" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Pasta Sauce (3)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapsePastaSauce3" class="collapse" aria-labelledby="PastaSauce3" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href=""></a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>1 onion</li>
+											<li>5 cloves of garlic</li>
+											<li>1 celery stock</li>
+											<li>1 canned of tomatoes</li>
+											<li>Basilicum</li>
+											<li> Thyme</li>
+											<li> 1 habanero pepper</li>
+											<li> Parsley for garnish</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 15 min</p>
+										<ol>
+											<li> Cook the onion, celery and habenero untill onions turn tranclucent</li>
+											<li> Add the garlic and canned tomatoes</li>
+											<li> Add a little water for desired thickness</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Pasta Tomato Sauce -->
+				<div class="card" id="PastaTomatoSauceContainer">
+					<div class="card-header" id="PastaTomatoSauce">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapsePastaTomatoSauce" aria-expanded="true" aria-controls="PastaTomatoSauce">
+								<img src="https://i.imgur.com/Hx3RjIO.jpg" alt="Pasta Tomato Sauce" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Pasta Tomato Sauce
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapsePastaTomatoSauce" class="collapse" aria-labelledby="PastaTomatoSauce" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/?evt19=1">
+									Pasta Tomato Sauce
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>1 onion, chopped</li>
+											<li>5 garlic cloves, minced</li>
+											<li>59 ml olive oil</li>
+											<li>2 cans tomatoes</li>
+											<li>2 tsp salt</li>
+											<li>1 tsp white sugar</li>
+											<li>1 bay leaf</li>
+											<li>¾ tsp dried basil</li>
+											<li>½ tsp ground black pepper</li>
+										</ul>
+									</td>
+									<td>
+										<p>
+											Time: 2 h 20 min (reduced: 30-45 min) <br>Serving: 6
+										</p>
+										<ol>
+											<li>In a large saucepan over medium heat, saute onion and garlic in olive oil until onion is translucent.</li>
+											<li>Stir in tomatoes, salt, sugar and bay leaf.</li>
+											<li>Cover, reduce heat to low, and simmer 90 minutes.</li>
+											<li>Stir in tomato paste, basil, pepper (and meatballs) and simmer 30 minutes more.</li>
+											<li>Serve (with pasta).</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Pastechi -->
+				<div class="card" id="PastechiContainer">
+					<div class="card-header" id="Pastechi">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapsePastechi" aria-expanded="true" aria-controls="collapsePastechi">
+								<img src="https://i.imgur.com/WJVsp9y.jpg" alt="Pastechi" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								<img id="tag" src="http://www.myiconfinder.com/uploads/iconsets/256-256-161155927d849dfecb1cd5eaf62e822a-drumstick.png">
+								<img id="tag" src="https://image.flaticon.com/icons/png/512/123/123281.png">
+								<img id="tag" src="http://earth4u.eu/wp-content/uploads/2014/05/2_fish.png">
+								Pastechi
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapsePastechi" class="collapse" aria-labelledby="Pastechi" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="http://www.antilliaansekeuken.nl/antilliaanse-pasteitjes/">
+									Pastechi
+								</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<p>Dough</p>
+										<ul>
+											<li>500 g flour (tarwe or patent)</li>
+											<li>16 g baking powder (1 bag)</li>
+											<li>2 eggs</li>
+											<li>50 g margarine</li>
+											<li>1 tbs salt</li>
+											<li>200 ml water</li>
+										</ul>
+										<p>Filling</p>
+										<ul>
+											<li>500 g chicken breast, ground beef, fish (tuna), or grated cheese</li>
+											<li>1 onion</li>
+											<li>1 tomato</li>
+											<li>1 green bell pepper</li>
+											<li>2 garlic cloves</li>
+											<li>2 tbs raisins</li>
+											<li>1 celery stalk</li>
+											<li>Ground black pepper</li>
+											<li>Soy sauce</li>
+											<li>½ madame jeanette (optional)</li>
+											<li>piccalilly (optional)</li>
+											<li>capers (optional)</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 1 h 30 min<br>
+										Serving: 15-20 small pieces</p>
+										<p>Filling</p>
+										<ol>
+											<li>If just cheese, skip this step.</li>
+											<li>Melt butter in a hot pan and add all the ingredients except the meat.</li>
+											<li>Cook until the onions become translucent.</li>
+											<li>Add the meat and cook until the meat is cooked through.</li>
+											<li>Set aside to cool.</li>
+										</ol>
+										<p>Dough</p>
+										<ol>
+											<li>Mix the flour and backing powder in a bowl en make a hole in the middle.</li>
+											<li>Put the eggs in the hole.</li>
+											<li>Add salt, margarine, water.</li>
+											<li>Mix everything until the dough does not stick to the bowl anymore.</li>
+											<li>Make small pieces of about 15 g each.</li>
+											<li>Roll the pieces into ½ cm thick circles.</li>
+											<li>Add 1 tbs of filling on thedough and fold it to close it.</li>
+											<li>Deep fry the pastechi's until golden brown. (160°C hot oil)</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Ramen -->
+				<div class="card" id="RamenContainer">
+					<div class="card-header" id="Ramen">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseRamen" aria-expanded="true" aria-controls="collapseRamen">
+								<img src="https://i.imgur.com/bgT2VME.jpg" alt="Ramen" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Ramen
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseRamen" class="collapse" aria-labelledby="Ramen" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>1 bag Dashino-Moto bonito flavouredseasoning</li>
+											<li>590 ml water</li>
+											<li>200 g noodles</li>
+											<li>Soy sauce</li>
+											<li>Salt</li>
+											<li>½ carrot, grated</li>
+											<li>6 lettuce leaves, cut in big pieces</li>
+											<li>Aonori (dried green seaweed)</li>
+											<li>Sesame seeds</li>
+										</ul>
+										<p>*Other ingredients can be added to taste</p>
+									</td>
+									<td>
+										<p>Time: 10 min<br>
+										Serving: 2</p>
+										<ol>
+											<li>Boil water in a soup pan.</li>
+											<li>Add the Dashino-Moto, soy sauce, salt to the water.</li>
+											<li>Add the carrot and lettuce to the soup and boil for about 1 min.</li>
+											<li>Add the noodles and boil for 3-5 min.</li>
+											<li>Add soup to a bowl.</li>
+											<li>Sprinkle aonori and sesame seeds on top and serve.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Red Pepper Pasta -->
+				<div class="card" id="RedPepperPastaContainer">
+					<div class="card-header" id="RedPepperPasta">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseRedPepperPasta" aria-expanded="true" aria-controls="collapseRedPepperPasta">
+								<img src="https://i.imgur.com/axyWPj3.jpg" alt="Red Pepper Pasta" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cw-en-ca/icons/dining/cw-vegetarian-icon.png">
+								Red Pepper Pasta
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseRedPepperPasta" class="collapse" aria-labelledby="RedPepperPasta" data-parent="#accordion">
+						<div class="card-body">
+							<p id="linkto">
+								<a href="https://www.reddit.com/r/vegangifrecipes/comments/6seqjp/red_pepper_pasta/">Red Pepper Pasta</a>
+							</p>
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<p>To Roast</p>
+										<ul>
+											<li>Splash of olive oil</li>
+											<li>2 red bell peppers, deseeded and chopped</li>
+											<li>1 red onion, chopped</li>
+											<li>2 red chili's, deseeded</li>
+											<li>3 garlic cloves</li>
+											<li>Salt</li>
+											<li>Pepper</li>
+										</ul>
+										<p>Other</p>
+										<ul>
+											<li>236 ml almond milk</li>
+											<li>2 tbs corn flour</li>
+											<li>1 tbs nutritional yeast (optional)</li>
+											<li>200 g linguini or spaghetti</li>
+										</ul>
+										<p>Garnish</p>
+										<ul>
+											<li>Basil leaves</li>
+										</ul>
+										
+									</td>
+									<td>
+										<p>Time: 45 min<br>
+										Serving: 2</p>
+										<ol>
+											<li>Oil a baking tray & put the roasting ingredients on it.</li>
+											<li>Bake the roasting ingredients for 30 minutes at 180℃</li>
+											<li>Take the vegetable out of the oven, let them cool down a bit.</li>
+											<li>Cook the pasta.</li>
+											<li>Put the vegetables in the blender and pour in the almond milk.</li>
+											<li>Blend into a liquid.</li>
+											<li>Pour the liquid into a high sided frying pan, add the cornflour & nutritional yeast & stir everything together</li>
+											<li>Add the cooked pasta into the pan & stir it all around so the pasta is well covered.</li>
+											<li>Serve immediately & garnish with basil leaves.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Tuna Amulet -->
+				<div class="card" id="TunaAmuletContainer">
+					<div class="card-header" id="TunaAmulet">
+						<h5 class="mb-0">
+							<button class="btn btn-link mybutton" data-toggle="collapse" data-target="#collapseTunaAmulet" aria-expanded="true" aria-controls="collapseTunaAmulet">
+								<img src="https://i.imgur.com/aS0gxCd.gif" alt="Tuna Amulet" id="icon" class="rounded float-left img-fluid myclass">
+								<img id="tag" src="http://earth4u.eu/wp-content/uploads/2014/05/2_fish.png">
+								Tuna Amulet
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseTunaAmulet" class="collapse" aria-labelledby="TunaAmulet" data-parent="#accordion">
+						<div class="card-body">
+							<table id="Preperations">
+								<tr>
+									<th>Ingredients</th>
+									<th>Preparing</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>4 eggs</li>
+											<li>1 tsp soy sauce</li>
+											<li>2 tbs water</li>
+											<li>½ tsp salt</li>
+											<li>2 tbs oil</li>
+											<li>Tuna salad</li>
+										</ul>
+									</td>
+									<td>
+										<p>Time: 15 min</p>
+										<ol>
+											<li>Put the eggs, soy sauce, water, salt, oil into a bowl and mix.</li>
+											<li>Make thin pancakes with the mixture.</li>
+											<li>Add tuna salad on 1 pancake and roll.</li>
+											<li>Cut into bite size pieces.</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+			</div>
+        </div>	
+	</body>
+	
+	<!-- This section has Script for search -->
+	<script>
+		// Get the searched value 
+		$(document).ready(function(){
+		  var searchTerm, panelContainerId;
+		  $('#accordion_search_bar').on('change keyup', function() {
+			searchTerm = $(this).val();
+			
+			//Get each card using the id
+			$('#accordion > .card').each(function() {
+			  panelContainerId = '#' + $(this).attr('id');
+
+			  // Makes search to be case insensitive 
+			  $.extend($.expr[':'], {
+				'contains': function(elem, i, match, array) {
+				  return (elem.textContent || elem.innerText || '').toLowerCase()
+					.indexOf((match[3] || "").toLowerCase()) >= 0;
+				}
+			  });
+
+			  // Show and Hide Triggers
+			  $(panelContainerId + ':not(:contains(' + searchTerm + '))').hide(); //Hide the rows that don't contain the search query.
+			  $(panelContainerId + ':contains(' + searchTerm + ')').show(); //Show the rows that do!
+
+			});
+		  });
+		}());
+	</script>
+
+</html>
